@@ -1,28 +1,24 @@
 import java.lang.*;
 import java.util.*;
 
-class DisplayInRange
+class ArrayDivFIveEven
 {
     public static void main(String a[])
     {
         Scanner sobj = new Scanner(System.in);
 
-        System.out.println("Enter Start : ");
-        int iStart = sobj.nextInt();
-        System.out.println("Enter End : ");
-        int iEnd = sobj.nextInt();
-        System.out.println("Enter Number of Elements : ");
+        System.out.println("Enter Number of elements : ");
         int iNum = sobj.nextInt();
-        System.out.println("Enter elements in array : ");
+        System.out.println("Enter elements in Array : ");
         int Arr[] = new int[iNum];
         int i = 0;
-        for(i = 0; i < Arr.length; i++)
+        for(i = 0; i < iNum; i++)
         {
             Arr[i] = sobj.nextInt();
         }
         for(i = 0; i < Arr.length; i++)
         {
-            if((Arr[i] < iEnd) && (Arr[i] > iStart))
+            if(((Arr[i]%5) == 0) && ((Arr[i]%2) == 0))
             {
                 System.out.println(Arr[i]+" ");
             }

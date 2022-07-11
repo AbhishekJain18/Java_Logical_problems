@@ -1,16 +1,14 @@
 import java.lang.*;
 import java.util.*;
 
-class DisplayInRange
+class NumLastOcc
 {
     public static void main(String a[])
     {
         Scanner sobj = new Scanner(System.in);
 
-        System.out.println("Enter Start : ");
-        int iStart = sobj.nextInt();
-        System.out.println("Enter End : ");
-        int iEnd = sobj.nextInt();
+        System.out.println("Enter Number : ");
+        int iNo = sobj.nextInt();
         System.out.println("Enter Number of Elements : ");
         int iNum = sobj.nextInt();
         System.out.println("Enter elements in array : ");
@@ -20,12 +18,20 @@ class DisplayInRange
         {
             Arr[i] = sobj.nextInt();
         }
-        for(i = 0; i < Arr.length; i++)
+        for(i=(Arr.length-1) ; i>=0; i--)
         {
-            if((Arr[i] < iEnd) && (Arr[i] > iStart))
+            if(Arr[i] == iNo)
             {
-                System.out.println(Arr[i]+" ");
+                break;
             }
+        }
+        if(i == 0)
+        {
+            System.out.println("False");
+        }
+        else
+        {
+            System.out.println(i);
         }
     }
 }
